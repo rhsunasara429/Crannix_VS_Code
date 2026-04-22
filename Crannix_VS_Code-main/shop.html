@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - CRANNIX</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="top-bar-text">
+                    <i class="fas fa-truck"></i>
+                    <span>Free Shipping on Orders Over ₹4,150</span>
+                </div>
+                <div class="top-bar-links">
+                    
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <img class= "logo" src="logos/CRANNIX FINAL LOGO 1.png" alt="CRANNIX" class="logo-img">
+                </a>
+                
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="shop.html" class="nav-link active">Shop</a>
+                    <a href="about.html" class="nav-link">About</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="search-toggle" id="searchToggle">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <a href="wishlist.html" class="header-icon">
+                        <i class="far fa-heart"></i>
+                        <span class="wishlist-count">0</span>
+                    </a>
+                    <a href="login.html" class="header-icon">
+                        <i class="far fa-user"></i>
+                    </a>
+                    <button class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-bar" id="searchBar">
+            <div class="container">
+                <form class="search-form">
+                    <input type="text" placeholder="Search for products...">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <img src="images/crannix-logo.png" alt="CRANNIX" class="logo-img">
+            <button class="close-menu" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="shop.html" class="mobile-nav-link active">Shop</a>
+            <a href="about.html" class="mobile-nav-link">About</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <a href="faq.html" class="mobile-nav-link">FAQ</a>
+            
+        </nav>
+        <div class="mobile-menu-footer">
+            <a href="login.html" class="mobile-btn">Sign In</a>
+            <a href="shop.html" class="mobile-btn primary">Shop Now</a>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="page-title">Shop</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Shop</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Content -->
+    <section class="shop-section">
+        <div class="container">
+            <div class="shop-container">
+                <!-- Filters Sidebar -->
+                <aside class="shop-filters">
+                    <div class="filter-section">
+                        <h4 class="filter-title">Categories</h4>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="cat-all" checked>
+                                <label for="cat-all">All Products</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="cat-printer">
+                                <label for="cat-printer">Printer Covers</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="cat-monitor">
+                                <label for="cat-monitor">Monitor Covers</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="cat-gaming">
+                                <label for="cat-gaming">PS5 Covers</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="cat-gym">
+                                <label for="cat-gym">Gym Bags</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="cat-duffle">
+                                <label for="cat-duffle">Duffle Bags</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="cat-travel">
+                                <label for="cat-travel">Travel Organizers</label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="cat-office">
+                                <label for="cat-office">Office Accessories</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4 class="filter-title">Price Range</h4>
+                        <div class="price-range">
+                            <div class="price-inputs">
+                                <input type="number" placeholder="Min" id="priceMin">
+                                <span>-</span>
+                                <input type="number" placeholder="Max" id="priceMax">
+                            </div>
+                            <button class="btn btn-sm btn-outline" id="applyPrice">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4 class="filter-title">Rating</h4>
+                        <div class="filter-options">
+                            <div class="filter-option">
+                                <input type="checkbox" id="rating-4">
+                                <label for="rating-4">
+                                    <span class="stars">★★★★☆</span> & Up
+                                </label>
+                            </div>
+                            <div class="filter-option">
+                                <input type="checkbox" id="rating-3">
+                                <label for="rating-3">
+                                    <span class="stars">★★★☆☆</span> & Up
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="shop-main">
+                    <div class="shop-toolbar">
+                        <span class="shop-results">Showing <span id="productCount">0</span> products</span>
+                        <div class="shop-sort">
+                            <label for="sortSelect">Sort by:</label>
+                            <select id="sortSelect">
+                                <option value="featured">Featured</option>
+                                <option value="newest">Newest</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="rating">Best Rated</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="shop-products" id="shopProducts">
+                        <!-- Products loaded via JavaScript -->
+                    </div>
+
+                    <div class="pagination">
+                        <button class="pagination-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="pagination-btn active">1</button>
+                        <button class="pagination-btn">2</button>
+                        <button class="pagination-btn">3</button>
+                        <button class="pagination-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2 class="newsletter-title">Stay Updated</h2>
+                    <p class="newsletter-desc">Subscribe to get special offers, new product alerts, and exclusive deals.</p>
+                </div>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <img src="logos/CRANNIX FINAL LOGO icon.png" alt="CRANNIX" class="logo-img">
+                    </a>
+                    <p class="footer-desc">Premium travel and office utility products designed to protect your gear and simplify your life.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-heading">Shop</h4>
+                    <ul>
+                        <li><a href="shop.html?category=printer">Printer Covers</a></li>
+                        <li><a href="shop.html?category=monitor">Monitor Covers</a></li>
+                        <li><a href="shop.html?category=gaming">PS5 Covers</a></li>
+                        <li><a href="shop.html?category=gym">Gym Bags</a></li>
+                        <li><a href="shop.html?category=travel">Travel Organizers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="returns.html">Returns</a></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-envelope"></i> support@crannix.com</li>
+                        <li><i class="fas fa-phone"></i> 1-800-CRANNIX</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Business Ave, NY 10001</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">&copy; 2026 CRANNIX. All rights reserved.</p>
+                    <div class="footer-policies">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="shipping.html">Shipping Policy</a>
+                        <a href="returns.html">Returns & Refunds</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+    <script>
+        // Pagination variables
+        const PRODUCTS_PER_PAGE = 12;
+        let currentPage = 1;
+        let allProducts = [];
+        let displayedProducts = [];
+
+        // Filter variables
+        let selectedCategories = ['all'];
+        let priceRange = { min: 0, max: Infinity };
+        let minRating = 0;
+
+        // Initialize shop page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load all products
+            allProducts = [...window.Products.products];
+            applyFilters();
+            setupFilterListeners();
+            setupPaginationButtons();
+            
+            // Sort functionality
+            document.getElementById('sortSelect').addEventListener('change', function(e) {
+                applySort(e.target.value);
+            });
+        });
+
+        function setupFilterListeners() {
+            // Category filters
+            document.querySelectorAll('[id^="cat-"]').forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    if (this.id === 'cat-all') {
+                        if (this.checked) {
+                            document.querySelectorAll('[id^="cat-"]').forEach(cb => cb.checked = false);
+                            this.checked = true;
+                            selectedCategories = ['all'];
+                        }
+                    } else {
+                        document.getElementById('cat-all').checked = false;
+                        updateSelectedCategories();
+                    }
+                    currentPage = 1;
+                    applyFilters();
+                    setupPaginationButtons();
+                });
+            });
+
+            // Price filter
+            document.getElementById('applyPrice').addEventListener('click', function() {
+                const minVal = document.getElementById('priceMin').value;
+                const maxVal = document.getElementById('priceMax').value;
+                priceRange.min = minVal ? parseFloat(minVal) : 0;
+                priceRange.max = maxVal ? parseFloat(maxVal) : Infinity;
+                currentPage = 1;
+                applyFilters();
+                setupPaginationButtons();
+            });
+
+            // Rating filters
+            document.querySelectorAll('[id^="rating-"]').forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        minRating = parseInt(this.id.split('-')[1]);
+                    } else {
+                        minRating = 0;
+                    }
+                    currentPage = 1;
+                    applyFilters();
+                    setupPaginationButtons();
+                });
+            });
+        }
+
+        function updateSelectedCategories() {
+            selectedCategories = [];
+            document.querySelectorAll('[id^="cat-"]:not(#cat-all)').forEach(checkbox => {
+                if (checkbox.checked) {
+                    const catSlug = checkbox.id.replace('cat-', '');
+                    selectedCategories.push(catSlug);
+                }
+            });
+            if (selectedCategories.length === 0) {
+                selectedCategories = ['all'];
+                document.getElementById('cat-all').checked = true;
+            }
+        }
+
+        function applyFilters() {
+            displayedProducts = allProducts.filter(product => {
+                // Category filter
+                if (selectedCategories[0] !== 'all' && !selectedCategories.includes(product.categorySlug)) {
+                    return false;
+                }
+                
+                // Price filter
+                if (product.price < priceRange.min || product.price > priceRange.max) {
+                    return false;
+                }
+                
+                // Rating filter
+                if (product.rating < minRating) {
+                    return false;
+                }
+                
+                return true;
+            });
+            
+            updateProductDisplay();
+        }
+
+        function applySort(sortType) {
+            let sortedProducts = [...displayedProducts];
+            switch(sortType) {
+                case 'price-low':
+                    sortedProducts.sort((a, b) => a.price - b.price);
+                    break;
+                case 'price-high':
+                    sortedProducts.sort((a, b) => b.price - a.price);
+                    break;
+                case 'rating':
+                    sortedProducts.sort((a, b) => b.rating - a.rating);
+                    break;
+                case 'newest':
+                    sortedProducts.sort((a, b) => b.isNew - a.isNew);
+                    break;
+            }
+            displayedProducts = sortedProducts;
+            currentPage = 1;
+            updateProductDisplay();
+            setupPaginationButtons();
+        }
+
+        function updateProductDisplay() {
+            const startIdx = (currentPage - 1) * PRODUCTS_PER_PAGE;
+            const endIdx = startIdx + PRODUCTS_PER_PAGE;
+            const pageProducts = displayedProducts.slice(startIdx, endIdx);
+            
+            window.Products.renderProductsGrid('shopProducts', pageProducts);
+            document.getElementById('productCount').textContent = displayedProducts.length;
+        }
+
+        function setupPaginationButtons() {
+            const totalPages = Math.ceil(displayedProducts.length / PRODUCTS_PER_PAGE);
+            const paginationBtns = document.querySelectorAll('.pagination-btn:not(.prev):not(.next)');
+            
+            paginationBtns.forEach(btn => {
+                const page = parseInt(btn.textContent);
+                btn.classList.remove('active');
+                if (page === currentPage) {
+                    btn.classList.add('active');
+                }
+                btn.onclick = function() {
+                    currentPage = page;
+                    updateProductDisplay();
+                    setupPaginationButtons();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                };
+            });
+            
+            // Next button
+            document.querySelector('.pagination-btn.next').onclick = function() {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    updateProductDisplay();
+                    setupPaginationButtons();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            };
+            
+            // Prev button
+            document.querySelector('.pagination-btn.prev').onclick = function() {
+                if (currentPage > 1) {
+                    currentPage--;
+                    updateProductDisplay();
+                    setupPaginationButtons();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            };
+        }
+    </script>
+</body>
+</html>
+
